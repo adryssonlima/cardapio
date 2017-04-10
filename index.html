@@ -18,10 +18,11 @@
                     <legend align="center">Cervejas Especiais</legend>
                     <ul id='app'>
                         <li v-for="(cerveja,index) in cervejas">
-                            <span>
-                                {{cerveja.nome}}.....{{cerveja.valor}}<br>
-                                {{cerveja.descricao}}
-                            </span>
+                            <div class='title'>
+                                <span class='name'>{{cerveja.nome}}
+								<span class='value'>{{cerveja.valor}}</span>
+                                <span class='name'>{{cerveja.descricao}}</span>
+                            </div>
                         </li>
                     </ul>
                 </fieldset>
@@ -53,7 +54,6 @@
     new Vue({
         el: '#app',
         data: {
-            text: 'Hello Word',
             cervejas: [
                 {nome: 'Trooper Iron Maiden', descricao: '(English Pale Ale) 500ml', valor: 'R$ 15,00'},
                 {nome: 'Syren - Dien in Paradise', descricao: '(Amber Lager c/ adição de capim limão) 600ml', valor: 'R$ 17,00'}
@@ -102,8 +102,13 @@
     .background {
         background-image: url(background_rock.jpg);
     }
-
-
+	.title .value { float:right; }
+	.title .name { float:left; }
+	
+	ul {
+		list-style-position: inside;
+		list-style-type: none;
+	}
 
 
 </style>
