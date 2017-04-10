@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!-- Vue.js -->
+        <script src="vue.min.js"></script>
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <title></title>
+    </head>
+    <body>
+
+        <div class="row padding">
+            <div class="col-md-4">
+                <fieldset class="scheduler-border">
+                    <legend align="center">Cervejas Especiais</legend>
+                    <ul id='app'>
+                        <li v-for="(cerveja,index) in cervejas">
+                            <span>
+                                {{cerveja.nome}}.....{{cerveja.valor}}<br>
+                                {{cerveja.descricao}}
+                            </span>
+                        </li>
+                    </ul>
+                </fieldset>
+            </div>
+            <div class="col-md-4">
+                <fieldset class="scheduler-border-meio">
+                    <legend align="center">Cervejas Especiais</legend>
+                    <br><br><br><br><br><br><br><br>
+                </fieldset>
+            </div>
+            <div class="col-md-4">
+                <fieldset class="scheduler-border">
+                    <legend align="center">Cervejas Especiais</legend>
+                    <ul>
+                        <li>cerveja 1</li>
+                        <li>cerveja 1</li>
+                        <li>cerveja 1</li>
+                    </ul>
+                </fieldset>
+            </div>
+        </div>
+
+        <div id="div">{{text}}</div>
+
+    </body>
+</html>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            text: 'Hello Word',
+            cervejas: [
+                {nome: 'Trooper Iron Maiden', descricao: '(English Pale Ale) 500ml', valor: 'R$ 15,00'},
+                {nome: 'Syren - Dien in Paradise', descricao: '(Amber Lager c/ adição de capim limão) 600ml', valor: 'R$ 17,00'}
+            ]
+        }
+    })
+    new Vue({
+        el: '#div',
+        data: {
+            text: 'Hello Word'
+        }
+    })
+</script>
+
+<style>
+    fieldset.scheduler-border {
+        color: white;
+        background-image: url(background_obscure.jpg);
+        border: 3px solid #ddd !important;
+        padding: 0 1.4em 1.4em 1.4em !important;
+        margin: 0 0 1.5em 0 !important;
+        -webkit-box-shadow:  0px 0px 0px 0px #000;
+        box-shadow:  0px 2000px rgba(0, 0, 0, 0) inset;
+    }
+    fieldset.scheduler-border-meio {
+        color: white;
+        background-image: url(background_rock.jpg);
+        border: 3px solid #ddd !important;
+        padding: 0 1.4em 1.4em 1.4em !important;
+        margin: 0 0 1.5em 0 !important;
+        -webkit-box-shadow:  0px 0px 0px 0px #000;
+        box-shadow:  0px 2000px rgba(0, 0, 0, 0.6) inset;
+    }
+
+    legend {
+        color: white;
+        font-weight: bold;
+        width: auto;
+        border-bottom: 0px;
+    }
+    .padding {
+        background: #880015;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .background {
+        background-image: url(background_rock.jpg);
+    }
+
+
+
+
+</style>
