@@ -15,55 +15,103 @@
         <div class="row padding">
             <div class="col-md-4">
                 <fieldset class="scheduler-border">
-                    <legend align="center">Cervejas Especiais</legend>
-                    <ul id='app'>
+                    <legend align="center"><h2><b>Cervejas Especiais<qb></h2></legend>
+                    <ul id='especiais-a'>
                         <li v-for="(cerveja,index) in cervejas">
-                            <div class='title'>
-                                <span class='name'>{{cerveja.nome}}
-								<span class='value'>{{cerveja.valor}}</span>
-                                <span class='name'>{{cerveja.descricao}}</span>
-                            </div>
+                            <div><b><span>{{cerveja.nome}}</span> {{cerveja.valor}}</b></div>
+                            <i>{{cerveja.descricao}}</i>
                         </li>
+                        <br><br>
                     </ul>
                 </fieldset>
             </div>
             <div class="col-md-4">
                 <fieldset class="scheduler-border-meio">
-                    <legend align="center">Cervejas Especiais</legend>
-                    <br><br><br><br><br><br><br><br>
+
+                    <h1 align="center"><b>Cervejaria Heavy & Rock Bar</b></h1>
+                    <br><br><br>
+
+                    <img src="rock-skull.png" alt="" align="center" height="150" width="370" />
+
+                    <br><br><br>
+
+                    <h1 align="center"><b>MENU</b></h1>
+
+                    <br><br><br><br><br><br><br><br><br><br><br><br>
+
+                    <span align="center">
+                        <h3>(85) 3226-5403</h3>
+                        <h4>Av. Dom Luís, 130 - Aldeota</h4>
+                        <h4><a href='http://facebook.com/cervejariaheavyrockbar.com'>Página Oficial - Cervejaria Heavy & Rock Bar</a></h4>
+                        <h4><a href='http://www.cervejariaheavyrockbar.com.br'>www.cervejariaheavyrockbar.com.br</a></h4>
+                    </span>
                 </fieldset>
             </div>
             <div class="col-md-4">
                 <fieldset class="scheduler-border">
-                    <legend align="center">Cervejas Especiais</legend>
-                    <ul>
-                        <li>cerveja 1</li>
-                        <li>cerveja 1</li>
-                        <li>cerveja 1</li>
+                    <legend align="center"><h2><b>Cervejas Especiais</b></h2></legend>
+                    <ul id='especiais-b'>
+                        <li v-for="(cerveja,index) in cervejas">
+                            <div><b><span>{{cerveja.nome}}</span> {{cerveja.valor}}</b></div>
+                            <i>{{cerveja.descricao}}</i>
+                        </li>
                     </ul>
                 </fieldset>
             </div>
         </div>
-
-        <div id="div">{{text}}</div>
 
     </body>
 </html>
 
 <script>
     new Vue({
-        el: '#app',
+        el: '#especiais-a',
         data: {
             cervejas: [
                 {nome: 'Trooper Iron Maiden', descricao: '(English Pale Ale) 500ml', valor: 'R$ 15,00'},
-                {nome: 'Syren - Dien in Paradise', descricao: '(Amber Lager c/ adição de capim limão) 600ml', valor: 'R$ 17,00'}
+                {nome: 'Syren - Dien in Paradise', descricao: '(Amber Lager c/ adição de capim limão) 600ml', valor: 'R$ 17,00'},
+                {nome: 'João Gordo', descricao: '(Artesanal Weizen) 600ml', valor: 'R$ 17,00'},
+                {nome: 'Raimundos', descricao: '(Hells Beer) 600ml', valor: 'R$ 14,00'},
+                {nome: 'Matanza', descricao: '(India Pale Ale) 600ml', valor: 'R$ 19,00'},
+                {nome: 'Sepultura', descricao: '(Ale/Weizen) 600ml', valor: 'R$ 20,00'},
+                {nome: 'Rotos de Porão - Crucificados Pelo Sistema', descricao: '(Irish Red Ale) 600ml', valor: 'R$ 17,00'},
+                {nome: 'Unearthly Baptized In Blood', descricao: '(Hells Beer) 600ml', valor: 'R$ 13,00'},
+                {nome: 'Krisium', descricao: '(Stout Beer) 600ml', valor: 'R$ 16,00'},
+                {nome: 'AC/DC', descricao: '(Pilsen Premium)', valor: 'R$ 20,00'},
+                {nome: 'CPM 22', descricao: '(Cerveja Pilsen)', valor: 'R$ 17,00'},
+                {nome: 'Caium', descricao: '(Pilsen com adição de mandioca)', valor: 'R$ 12,00'},
+                {nome: 'Appia', descricao: '(Trigo com adição de mel de laranjeira)', valor: 'R$ 18,00'},
+                {nome: 'Indica', descricao: '(Ipa com toque especial de rapadura)', valor: 'R$ 14,00'},
+                {nome: 'Vixnu', descricao: '(Double Ipa com aromas cítricos e de maracujá)', valor: 'R$ 11,00'},
+                {nome: 'Demoiselle', descricao: '(Porter com adição de café)', valor: 'R$ 16,00'},
+                {nome: 'Berthô', descricao: '(Double Brown Ale com adição de castanha do Pará)', valor: 'R$ 16,00'},
+                {nome: 'Ithaca', descricao: '(Imperial Stout com adição de rapadura queimada)', valor: 'R$ 12,00'},
             ]
         }
     })
     new Vue({
-        el: '#div',
+        el: '#especiais-b',
         data: {
-            text: 'Hello Word'
+            cervejas: [
+                {nome: 'Czechvar - Rep. Tcheca', descricao: '(Bohemia Pilsner) 500ml', valor: 'R$ 15,00'},
+                {nome: 'Fogaça Masterchef - Brasil', descricao: '(Pale Ale/Witbier) 330ml', valor: 'R$ 17,00'},
+                {nome: 'Duvel - Bélgica', descricao: '(Belgian Golden Ale) 330ml', valor: 'R$ 17,00'},
+                {nome: 'Young\'s Double Chocolate - Inglaterra' , descricao: '(Sweet Stout com adição de chocolate) 500ml', valor: 'R$ 14,00'},
+                {nome: 'Sticky Toffee Pudding Ale - Inglaterra', descricao: '(English Brown Ale c/ notas de pudim e bala de caramelo) 500ml', valor: 'R$ 19,00'},
+                {nome: 'Wells Banana Bread Beer Inglaterra', descricao: '(Fruit Beer sabor banana) 500ml', valor: 'R$ 20,00'},
+                {nome: 'Palta Beer - Brasil', descricao: '(Red Planet Ale) 500ml', valor: 'R$ 17,00'},
+                {nome: 'Baltika 04 - Rússia', descricao: '(Red Lager) 500ml', valor: 'R$ 13,00'},
+                {nome: 'Wells Bombardier - Inglaterra', descricao: '(English Pale Ale) 500ml', valor: 'R$ 16,00'},
+                {nome: 'Birits - Brasil', descricao: '(Vienna Lager) 600ml', valor: 'R$ 20,00'},
+                {nome: 'Cacildis - Brasil', descricao: '(Premium American Lager) 330ml', valor: 'R$ 17,00'},
+                {nome: 'Flensburger - Alemenha', descricao: '(Pilsen) 500ml', valor: 'R$ 12,00'},
+                {nome: 'Container British Beer - Brasil', descricao: '(Bakerloo - Pale Ale/Wembley English Blonde Beer) 500ml', valor: 'R$ 18,00'},
+                {nome: 'Benediktiner Alemanha', descricao: '(Weizen Beer) 500ml', valor: 'R$ 14,00'},
+                {nome: 'Coruja Larabela - Brasil', descricao: '(Adição de Pimenta/Europen Amber Lager) 500ml', valor: 'R$ 11,00'},
+                {nome: 'Coruja Noctua - Brasil', descricao: '(Dark Lager) 500ml', valor: 'R$ 16,00'},
+                {nome: 'Coruja Alba - Brasil', descricao: '(Weizen) 500ml', valor: 'R$ 16,00'},
+                {nome: 'Três Lobos - La Mafiosa Corleone - Brasil', descricao: '(Imperial Red Ale) 330ml', valor: 'R$ 12,00'},
+            ]
         }
     })
 </script>
@@ -102,12 +150,14 @@
     .background {
         background-image: url(background_rock.jpg);
     }
-	.title .value { float:right; }
-	.title .name { float:left; }
-	
+
+    li div { text-align:right; }
+    li div span { float:left; }
+
 	ul {
 		list-style-position: inside;
 		list-style-type: none;
+        padding-left: 1px;
 	}
 
 
